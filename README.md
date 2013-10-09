@@ -1,1 +1,2 @@
-This program accepts a user input of a noun or a noun-phrase and then uses that input in a sentence.
+This program accepts a user input of a noun or a noun-phrase and then uses that input in a sentence. After the first input it asks for different parts of speech to make a new 
+senstence using all of those pieces of speech.
