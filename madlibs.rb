@@ -1,25 +1,33 @@
-#puts "Please enter a noun or noun phrase:"
-#noun = gets.chomp
-#puts "The #{noun} went to sea in a sturdy ship."
+class Madlib
+  def self.prompt
+    puts "Please enter a noun"
+    noun = gets.chomp
 
-puts "Please enter a noun"
-N = gets.chomp
+    puts "Now enter an adjective"
+    adjective = gets.chomp
 
-puts "Now enter an adjective"
-Aj= gets.chomp
+    puts "Now enter a verb"
+    verb = gets.chomp
 
-puts "Now enter a verb"
-V= gets.chomp
+    puts "now enter an adverb"
+    adverb = gets.chomp
 
-puts "now enter an adverb"
-Ad= gets.chomp
+    puts "Please enter an object"
+    object = gets.chomp
 
-puts "Please enter an object"
-o=gets.chomp
-
-storage = {"Noun" => N, "Adjective" => Aj, "Verb" => V, "Adverb" => Ad, "Object" => o}
-
-array = ["The #{storage["Adjective"]} #{storage ["Noun"]} suddenly and #{storage ["Adverb"]} hand to #{storage ["Verb"]} the #{storage ["Object"]}.", "A #{storage["Object"]} is always #{storage["Verb"]}ing with #{storage["Noun"]}s", "The #{storage["Adjective"]}, #{storage["Verb"]}, #{storage["Noun"]} jumped over the lazy dog."]
-array.each do |phrase|
-	puts "#{phrase}"
+    parts_of_speech = {:Noun => noun, :Adjective => adjective, :Verb => verb, :Adverb => adverb, :Object => object}
+  end
 end
+
+class SentenceTemplates
+  def self.insert(parts_of_speech)
+    array = ["The #{parts_of_speech[:Adjective]} #{parts_of_speech[:Noun]} suddenly and #{parts_of_speech[:Adverb]} hand to #{parts_of_speech[:Verb]} the #{parts_of_speech[:Object]}.", "A #{parts_of_speech[:Object]} is always #{parts_of_speech[:Verb]}ing with #{parts_of_speech[:Noun]}s", "The #{parts_of_speech[:Adjective]}, #{parts_of_speech[:Verb]}, #{parts_of_speech[:Noun]} jumped over the lazy dog."]
+    array.each do |phrase|
+	    puts "#{phrase}"
+    end
+  end
+end
+
+
+parts_of_speech = Madlib.prompt
+SentenceTemplates.insert(parts_of_speech)
