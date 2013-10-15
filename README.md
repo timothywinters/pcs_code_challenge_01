@@ -9,3 +9,6 @@ The program displays three different pre-made sentences using the different part
 
 **Increment 4**
 Refactored the codebase to include classes and methods.
+
+**Incrementt 5**
+Added method of transportation and new sentences. 
